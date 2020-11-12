@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EbookStore.Mobile.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:customrenderers="clr-namespace:EbookStore.Mobile.Views.CustomRenderers"
+    Title="Shop">
+
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="{StaticResource Background}"
+            HorizontalOptions="Fill"
+            RowDefinitions="Auto,*"
+            RowSpacing="0"
+            VerticalOptions="FillAndExpand">
+            <StackLayout
+                Grid.Row="0"
+                Padding="15,10,15,10"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal"
+                Spacing="0"
+                VerticalOptions="StartAndExpand">
+                <StackLayout.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0.1" Color="{StaticResource Primary}" />
+                        <GradientStop Offset="1.0" Color="#ffc800" />
+                    </LinearGradientBrush>
+                </StackLayout.Background>
+                <customrenderers:RoundedEntry
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Search..."
+                    VerticalOptions="FillAndExpand" />
+                <customrenderers:RoundedButton
+                    HeightRequest="35"
+                    HorizontalOptions="End"
+                    ImageSource="icon_search_24.png"
+                    VerticalOptions="Center"
+                    WidthRequest="60" />
+            </StackLayout>
+            <SwipeView
+                Grid.Row="1"
+                BackgroundColor="Transparent"
+                VerticalOptions="Start">
+                <SwipeView.RightItems>
+                    <SwipeItems Mode="Reveal">
+                        <SwipeItem
+                            BackgroundColor="Green"
+                            IconImageSource="icon_add_64.png"
+                            Text="Add to Cart" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <Grid
+                    BackgroundColor="{StaticResource SecondaryBackground}"
+                    ColumnDefinitions="150, *"
+                    ColumnSpacing="0"
+                    RowDefinitions="220, .5"
+                    RowSpacing="0">
+                    <Image
+                        Margin="20,20,5,20"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        Source="example_photo.png" />
+                    <StackLayout Grid.Column="1" Margin="5,15,20,15">
+                        <Label
+                            FontSize="16"
+                            Text="J.K. Rowling"
+                            TextColor="{StaticResource Secondary}"
+                            TextDecorations="Underline" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            Text="Harry Potter and the Sorcerer's Stone"
+                            TextColor="White" />
+                        <Label
+                            FontSize="14"
+                            Text="Categories: Fantasy, For Kids"
+                            TextColor="White" />
+                        <Label
+                            FontSize="12"
+                            Text="Languages: English, Polish"
+                            TextColor="White" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="24"
+                            HorizontalOptions="End"
+                            Text="$14,71"
+                            TextColor="{StaticResource Primary}"
+                            VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Grid>
+            </SwipeView>
+            <!--<CollectionView
+                Grid.Row="1"
+                BackgroundColor="{StaticResource Background}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                </CollectionView.ItemsLayout>
+            </CollectionView>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

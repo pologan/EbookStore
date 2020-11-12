@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EbookStore.Mobile.Views.CartPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Cart"
+    BackgroundColor="{StaticResource Background}">
+    <ContentPage.Content>
+        <StackLayout>
+            <SwipeView
+                Grid.Row="1"
+                BackgroundColor="Transparent"
+                VerticalOptions="Start">
+                <SwipeView.RightItems>
+                    <SwipeItems Mode="Reveal">
+                        <SwipeItem
+                            BackgroundColor="Red"
+                            IconImageSource="icon_delete_64.png"
+                            Text="Remove" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <Grid
+                    BackgroundColor="{StaticResource SecondaryBackground}"
+                    ColumnDefinitions="100, *"
+                    ColumnSpacing="0"
+                    RowDefinitions="120, .5"
+                    RowSpacing="0">
+                    <Image
+                        Margin="20,10,5,10"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        Source="example_photo.png" />
+                    <StackLayout Grid.Column="1" Margin="0,15,20,15">
+                        <Label
+                            FontSize="14"
+                            Text="J.K. Rowling"
+                            TextColor="{StaticResource Secondary}"
+                            TextDecorations="Underline" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="Harry Potter and the Sorcerer's Stone"
+                            TextColor="White" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="End"
+                            Text="$14,71"
+                            TextColor="{StaticResource Primary}"
+                            VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </Grid>
+            </SwipeView>
+            <!--<CollectionView
+                Grid.Row="1"
+                BackgroundColor="{StaticResource Background}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                </CollectionView.ItemsLayout>
+            </CollectionView>-->
+            <Label
+                Margin="15"
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Start"
+                Text="Full price: $14,71"
+                TextColor="White"
+                VerticalOptions="End" />
+            <Button
+                Margin="0,0,0,20"
+                BackgroundColor="{StaticResource Primary}"
+                CornerRadius="50"
+                HorizontalOptions="Center"
+                Text="Buy Now"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="100" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
