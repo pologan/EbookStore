@@ -125,5 +125,9 @@
         ContentTemplate="{DataTemplate local:LoginPage}"
         Route="LoginPage"
         Shell.FlyoutBehavior="Disabled" />
+    <ShellContent
+        ContentTemplate="{DataTemplate local:BookDetailPage}"
+        Route="BookDetailPage"
+        Shell.FlyoutBehavior="Flyout" />
 
 </Shell>

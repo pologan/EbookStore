@@ -5,8 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:customrenderers="clr-namespace:EbookStore.Mobile.Views.CustomRenderers"
     Title="Shop">
-
     <ContentPage.Content>
+        
         <Grid
             BackgroundColor="{StaticResource Background}"
             HorizontalOptions="Fill"
@@ -41,6 +41,9 @@
                 Grid.Row="1"
                 BackgroundColor="Transparent"
                 VerticalOptions="Start">
+                <SwipeView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </SwipeView.GestureRecognizers>
                 <SwipeView.RightItems>
                     <SwipeItems Mode="Reveal">
                         <SwipeItem

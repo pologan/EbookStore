@@ -7,6 +7,8 @@
     BackgroundColor="{StaticResource Background}"
     Shell.PresentationMode="ModalAnimated">
     <ContentPage.Content>
-        <StackLayout />
+        <StackLayout>
+            <Label Text="Co do chuja" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

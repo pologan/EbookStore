@@ -16,5 +16,10 @@ namespace EbookStore.Mobile.Views
         {
             InitializeComponent();
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"{nameof(BookDetailPage)}", true);
+        }
     }
 }

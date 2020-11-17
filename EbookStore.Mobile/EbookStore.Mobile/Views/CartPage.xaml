@@ -60,22 +60,25 @@
                     <GridItemsLayout
                 </CollectionView.ItemsLayout>
             </CollectionView>-->
-            <Label
+            <StackLayout
                 Margin="15"
-                FontAttributes="Bold"
-                FontSize="30"
-                HorizontalOptions="Start"
-                Text="Full price: $14,71"
-                TextColor="White"
-                VerticalOptions="End" />
-            <Button
-                Margin="0,0,0,20"
-                BackgroundColor="{StaticResource Primary}"
-                CornerRadius="50"
-                HorizontalOptions="Center"
-                Text="Buy Now"
-                VerticalOptions="EndAndExpand"
-                WidthRequest="100" />
+                Orientation="Horizontal"
+                VerticalOptions="EndAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="28"
+                    HorizontalOptions="Start"
+                    Text="Full price: $14,71"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+                <Button
+                    BackgroundColor="{StaticResource Primary}"
+                    CornerRadius="50"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Buy Now"
+                    WidthRequest="100" />
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
